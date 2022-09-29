@@ -7,16 +7,18 @@ import { BrowserRouter } from "react-router-dom"
 // Connects to data-controller="react"
 export default class extends Controller {
   static values = {
-    props: String
+    apartments: String,
+    user: Object
   }
   
   connect() {
-    
-    const apartments = JSON.parse(this.propsValue)
+    const apartments = JSON.parse(this.apartmentsValue)
+    const user = this.userValue
     console.log("React controller connected!")
     console.log("prop test: ", apartments)
     App.defaultProps = {
-      apartments: apartments
+      apartments: apartments,
+      user: user
     }
     const app = document.getElementById("app")
     createRoot(app).render(
