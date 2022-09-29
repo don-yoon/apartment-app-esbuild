@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.create(email: "example@email.com", password: "password")
+user = User.first
 apartments = [
   {
     street: "4 Privet Drive",
@@ -48,5 +50,5 @@ apartments = [
 ]
 
 apartments.each do |apartment|
-    Apartment.create(apartment)
+    user.apartments.create(apartment)
 end
