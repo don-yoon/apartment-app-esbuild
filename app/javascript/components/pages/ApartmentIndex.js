@@ -1,21 +1,13 @@
 import React from "react"
+import Card from "../components/Card"
 
 const ApartmentIndex = ({apartments}) => {
   return (
     <>
       <div>ApartmentIndex</div>
-      {
-        apartments.map((object, index) => {
-          return(
-            <div key={index}> 
-              <img src={object.image} /> 
-              <div>{ object.street } {object.city}</div> 
-            </div>
-          )
-        })
-      }
+      <Card apartments={apartments}/>
     </>
   )
 }
 
-export default ApartmentIndex
+export default ApartmentIndex 

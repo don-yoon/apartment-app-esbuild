@@ -5,21 +5,26 @@ const Header = ({user, setLogin}) => {
     
   return (
     <>
-      <div>Header</div>
-      {!user.logged_in &&
-            <a href={user.sign_in_route} rel="noreferrer">
-              <button>
-                    Sign In
-              </button>
-            </a>
-      }
-      {user.logged_in &&
-            <a href={user.sign_out_route} rel="noreferrer">
+      <div>
+        <div>Header</div>
+        {!user.logged_in &&
+              <a href={user.sign_in_route} rel="noreferrer">
+                <button>
+                      Sign In
+                </button>
+              </a>
+        }
+        {user.logged_in &&
+          <>
+            <div> userinfo: {user.current_user.email} </div>
+              <a href={user.sign_out_route} rel="noreferrer">
               <button onClick={() => setLogin(false)}>
-                    LOGOUT
+                LOGOUT
               </button>
             </a>
-      }
+          </>
+        }
+      </div>
     </>
   )
 }

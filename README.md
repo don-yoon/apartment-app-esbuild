@@ -18,7 +18,17 @@ Change in route.rb
 get '*path', to: 'app#home'
 root 'app#home'
 ```
-Change in views/app/home.html.erb
+- Make sure to add instance variables you want to pass to the react side. (Devise works without adding here)
+```ruby
+class AppController < ApplicationController
+  def home
+    @apartments = Apartment.all.to_a.to_json
+  end
+end
+
+```
+
+- Change in views/app/home.html.erb
 ```ruby
 <%= content_tag(:div, "", id:"app", data: {
     controller: "react",
@@ -65,4 +75,9 @@ export default class extends Controller {
     )
   }
 }
+```
+
+# Start
+```zsh
+bin/dev
 ```
