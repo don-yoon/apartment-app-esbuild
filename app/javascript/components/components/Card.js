@@ -5,7 +5,7 @@ const Card = ({apartments}) => {
     apartments.map((object, index) => {
           return(
             <div key={index}> 
-              <img src={object.image} /> 
+              <img className='w-[20vw] h-[30vh] object-cover' src={object.image} /> 
               <div>{ object.street } {object.city}</div> 
             </div>
           )
