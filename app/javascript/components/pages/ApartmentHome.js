@@ -5,7 +5,9 @@ const ApartmentHome = () => {
   return (
     <>
       <div className="text-3xl">ApartmentHome</div>
-      <Link to="/apartmentindex"> See All the Apartments </Link>
+      <div className="text-lg text-blue-700">
+        <Link to="/apartmentindex"> See All the Apartments </Link>
+      </div>
     </>
   )
 }
