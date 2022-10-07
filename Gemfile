@@ -68,3 +68,5 @@ end
 gem "rspec-rails", "~> 5.1"
 
 gem "devise", "~> 4.8"
+
+gem "tailwindcss-rails", "~> 2.0"

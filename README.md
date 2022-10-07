@@ -81,3 +81,25 @@ export default class extends Controller {
 ```zsh
 bin/dev
 ```
+
+# Heroku Deployment
+make sure Procfile exists and inside add
+```
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
+```
+link github repo to heroku
+add node.js buildpack (ruby should already be added)
+use heroku console to run
+```zsh
+rails db:migrate
+rails db:seed
+```
+
+# Adding Tailwind
+```zsh
+bundle add tailwindcss-rails
+rails tailwindcss:install
+```
+make sure you leave the Procfile.dev alone when prompted.
+
+Check application.thml.erb because it adds a flexbox in the main. 
