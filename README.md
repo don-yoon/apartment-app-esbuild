@@ -94,3 +94,12 @@ use heroku console to run
 rails db:migrate
 rails db:seed
 ```
+
+# Adding Tailwind
+```zsh
+bundle add tailwindcss-rails
+rails tailwindcss:install
+```
+make sure you leave the Procfile.dev alone when prompted.
+
+Check application.thml.erb because it adds a flexbox in the main. 

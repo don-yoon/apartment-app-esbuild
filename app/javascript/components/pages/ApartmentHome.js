@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const ApartmentHome = () => {
   return (
     <>
-      <div>ApartmentHome</div>
+      <div className="text-3xl">ApartmentHome</div>
       <Link to="/apartmentindex"> See All the Apartments </Link>
     </>
   )
